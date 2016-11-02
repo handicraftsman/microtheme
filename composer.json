@@ -1,0 +1,12 @@
+{
+    "name": "handicraftsman/microtheme",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Nickolay Ilyushin",
+            "email": "nickolay02@inbox.ru"
+        }
+    ],
+    "require": {}
+}
