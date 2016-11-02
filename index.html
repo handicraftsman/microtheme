@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MicroTheme</title>
+    <!-- VENDOR-LIBS -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jscolor.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-flex.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    
+    <!-- APP-LIBS -->
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <main style="padding: 4px; width: 98%; margin: auto" class="row">
+      <div class="card col-xs-6">
+        <div class="card-block">
+          <h4 class="card-title">Options</h4>
+          <div class="form-group row">
+            <div class="col-xs-12">
+              <script>
+                function nameUpd(){
+                  document.getElementById("fieldName").innerHTML =
+                    document.getElementById("colSName").value
+                }
+              </script>
+              <label for="colName">Scheme Name</label>
+              <input onchange="nameUpd()" type="text" class="form-control" id="colSName" value="microthemedemo">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Background Color</label>
+              <input onchange="update(this.jscolor, 'fieldBackground')" type="text" class="jscolor {hash:true} form-control" id="colBackground" value="#F3F3F3">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Text Color</label>
+              <input onchange="update(this.jscolor, 'fieldNormalText')" type="text" class="jscolor {hash:true} form-control" id="colNormalText" value="#4D5A54">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Comment Color</label>
+              <input onchange="update(this.jscolor, 'fieldComment')" type="text" class="jscolor {hash:true} form-control" id="colComment" value="#A4C889">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Constant Color</label>
+              <input onchange="update(this.jscolor, 'fieldConstant')" type="text" class="jscolor {hash:true} form-control" id="colConstant" value="#65766E">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">String Color</label>
+              <input onchange="update(this.jscolor, 'fieldString')" type="text" class="jscolor {hash:true} form-control" id="colString" value="#763535">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Number Color</label>
+              <input onchange="update(this.jscolor, 'fieldNumber')" type="text" class="jscolor {hash:true} form-control" id="colNumber" value="#436876">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Idenifier Color</label>
+              <input onchange="update(this.jscolor, 'fieldIdentifier')" type="text" class="jscolor {hash:true} form-control" id="colIdent" value="#76366B">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Statement Color</label>
+              <input onchange="update(this.jscolor, 'fieldStatement')" type="text" class="jscolor {hash:true} form-control" id="colStatement" value="#7E5F7A">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Preprocessor Statement Color</label>
+              <input onchange="update(this.jscolor, 'fieldPreprocStatement')" type="text" class="jscolor {hash:true} form-control" id="colPreprocStatement" value="#504376">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Type Color</label>
+              <input onchange="update(this.jscolor, 'fieldType')" type="text" class="jscolor {hash:true} form-control" id="colType" value="#7E7B56">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Special Color</label>
+              <input onchange="update(this.jscolor, 'fieldSpecial')" type="text" class="jscolor {hash:true} form-control" id="colSpecial" value="#23A3B1">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Underlined Color</label>
+              <input onchange="update(this.jscolor, 'fieldUnderlined')" type="text" class="jscolor {hash:true} form-control" id="colUnderlined" value="#C08A2B">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Error Color</label>
+              <input onchange="update(this.jscolor, 'fieldErr')" type="text" class="jscolor {hash:true} form-control" id="colError" value="#FF0000">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">ToDo Color</label>
+              <input onchange="update(this.jscolor, 'fieldTodo')" type="text" class="jscolor {hash:true} form-control" id="colTodo" value="#4677C0">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Statusline Color</label>
+              <input onchange="update(this.jscolor, 'fieldStatusline')" type="text" class="jscolor {hash:true} form-control" id="colStatusline" value="#DADADA">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Indent-Char Color</label>
+              <input onchange="update(this.jscolor, 'fieldIndentChar')" type="text" class="jscolor {hash:true} form-control" id="colIndentChar" value="#DADADA">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Line Number Color</label>
+              <input onchange="update(this.jscolor, 'fieldLineNum')" type="text" class="jscolor {hash:true} form-control" id="colLineNum" value="#4D5A54">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Current Line Number Color</label>
+              <input onchange="update(this.jscolor, 'fieldCurLineNum')" type="text" class="jscolor {hash:true} form-control" id="colCurLineNum" value="#4D5A54">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Cursor Line Color</label>
+              <input onchange="update(this.jscolor, 'fieldCurLine')" type="text" class="jscolor {hash:true} form-control" id="colCurLine" value="#F8F8F8">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Column Color</label>
+              <input onchange="update(this.jscolor, 'fieldCol')" type="text" class="jscolor {hash:true} form-control" id="colCol" value="#F8F8F8">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-xs-6">
+              <label for="colBackground">Gutter Error Color</label>
+              <input onchange="update(this.jscolor, 'fieldGutErr')" type="text" class="jscolor {hash:true} form-control" id="colGutErr" value="#5A1C17">
+            </div>
+            <div class="col-xs-6">
+              <label for="colTextNormal">Gutter Warning Color</label>
+              <input onchange="update(this.jscolor, 'fieldGutWarn')" type="text" class="jscolor {hash:true} form-control" id="colGutWarn" value="#816421">
+            </div>
+          </div>  
+        </div>
+      </div>
+      
+      <div class="card col-xs-6">
+        <div class="card-block">
+          <h4 class="card-title">Code</h4>
+          <code style="display: block; position: fixed">
+            # Theme: <span id="fieldName"></span><br/>
+            # Made using<br/> 
+            # https://github.com/handicraftsman/microtheme<br/>
+            color-link default "<span id="fieldNormalText"></span>,<span id="fieldBackground"></span>"<br/>
+            color-link comment "<span id="fieldComment"></span>"<br/>
+            color-link identifier "<span id="fieldIdentifier"></span>"<br/>
+            color-link constant "<span id="fieldConstant"></span>"<br/>
+            color-link statement "<span id="fieldStatement"></span>"<br/>
+            color-link statement.operator "<span id="fieldStatementOp"></span>"<br/>
+            color-link preproc "<span id="fieldPreprocStatement"></span>"<br/>
+            color-link type "<span id="fieldType"></span>"<br/>
+            color-link special "<span id="fieldSpecial"></span>"<br/>
+            color-link underlined "<span id="fieldUnderlined"></span>"<br/>
+            color-link error "<span id="fieldErr"></span>"<br/>
+            color-link todo "<span id="fieldTodo"></span>"<br/>
+            color-link statusline "<span id="fieldStatusline"></span>"<br/>
+            color-link indent-char "<span id="fieldIndentChar"></span>"<br/>
+            color-link line-number "<span id="fieldLineNum"></span>"<br/>
+            color-link gutter-error "<span id="fieldGutErr"></span>"<br/>
+            color-link gutter-warning "<span id="fieldGutWarn"></span>"<br/>
+            color-link cursor-line "<span id="fieldCurLine"></span>"<br/>
+            color-link current-line-number "<span id="fieldCurLineNum"></span>"<br/>
+            color-link color-column "<span id="fieldCol"></span>"
+          </code>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
